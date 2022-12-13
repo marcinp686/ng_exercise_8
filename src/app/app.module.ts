@@ -5,16 +5,30 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from "@angular/common/http";
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatSelectModule } from '@angular/material/select'
+import { MatButtonModule } from '@angular/material/button'
+import { MatInputModule } from '@angular/material/input'
+import { ReactiveFormsModule } from '@angular/forms'
+
+import { CreateUserWithRoleComponent } from './components/create-user-with-role/create-user-with-role.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CreateUserWithRoleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatButtonModule,
+    ReactiveFormsModule,
+    MatInputModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,21 @@
+<div class="user-create">
+  <h1>Create user with a role:</h1>
+  <div class="user-create-form">
+    <form [formGroup]="createUserFormGroup" (ngSubmit)="onCreateUser(createUserFormGroup.value)">
+      <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput type="text" formControlName="email">
+      </mat-form-field>
+      </div>
+      <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Role</mat-label>
+        <input matInput type="text" formControlName="roleId">
+      </mat-form-field>
+      </div>
+      
+      <button mat-button color="primary" [disabled]="createUserFormGroup.invalid" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
