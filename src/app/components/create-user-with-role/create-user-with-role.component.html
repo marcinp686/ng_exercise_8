@@ -9,9 +9,14 @@
       </mat-form-field>
       </div>
       <div>
-      <mat-form-field appearance="fill">
+      
+        <mat-form-field appearance="fill">
         <mat-label>Role</mat-label>
-        <input matInput type="text" formControlName="roleId">
+        
+        <input type="text" placeholder="Select role" aria-label="Role" matInput formControlName="role" [matAutocomplete]="auto">
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredRoles | async" [value]="option.role">{{option.role}}</mat-option>
+        </mat-autocomplete>
       </mat-form-field>
       </div>
       

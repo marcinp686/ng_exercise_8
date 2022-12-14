@@ -10,6 +10,7 @@ import { MatSelectModule } from '@angular/material/select'
 import { MatButtonModule } from '@angular/material/button'
 import { MatInputModule } from '@angular/material/input'
 import { ReactiveFormsModule } from '@angular/forms'
+import { MatAutocompleteModule } from '@angular/material/autocomplete'
 
 import { CreateUserWithRoleComponent } from './components/create-user-with-role/create-user-with-role.component';
 
@@ -27,7 +28,8 @@ import { CreateUserWithRoleComponent } from './components/create-user-with-role/
     MatSelectModule,
     MatButtonModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    MatAutocompleteModule
     
   ],
   providers: [],
