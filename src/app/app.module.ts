@@ -13,15 +13,18 @@ import { MatRadioModule } from '@angular/material/radio'
 import { ReactiveFormsModule } from '@angular/forms'
 import { FormsModule } from '@angular/forms'
 import { MatAutocompleteModule } from '@angular/material/autocomplete'
+import { MatCheckboxModule } from '@angular/material/checkbox'
 
 import { CreateUserWithRoleComponent } from './components/create-user-with-role/create-user-with-role.component';
 import { CreateUserWithRoleRadioComponent } from './components/create-user-with-role-radio/create-user-with-role-radio.component';
+import { CreateJobWithTagsComponent } from './components/create-job-with-tags/create-job-with-tags.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreateUserWithRoleComponent,
-    CreateUserWithRoleRadioComponent
+    CreateUserWithRoleRadioComponent,
+    CreateJobWithTagsComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import { CreateUserWithRoleRadioComponent } from './components/create-user-with-
     MatInputModule,
     MatAutocompleteModule,
     MatRadioModule,
-    FormsModule
+    FormsModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

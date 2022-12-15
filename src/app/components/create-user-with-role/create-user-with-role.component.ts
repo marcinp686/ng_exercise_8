@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
-import { combineLatest, map, Observable, shareReplay, startWith, throwError } from 'rxjs';
+import { combineLatest, map, Observable, shareReplay, startWith } from 'rxjs';
 import { RoleModel } from 'src/app/models/role.model';
 import { UserModel } from 'src/app/models/user.model';
 import { MockapiService } from 'src/app/services/mockapi.service';

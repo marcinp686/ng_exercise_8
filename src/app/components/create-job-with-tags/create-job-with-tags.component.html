@@ -1,0 +1,27 @@
+<div class="job-create">
+<section class="job-create-form" [formGroup]="createJobFormGroup">
+
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Title</mat-label>
+      <input matInput type="text" formControlName="title">
+    </mat-form-field>
+  </div>
+  
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Description</mat-label>
+      <input matInput type="text" formControlName="description">
+    </mat-form-field>
+  </div>
+  
+  <div formGroupName="tags">
+    <ng-container *ngFor="let jobTag of jobTags$ | async">
+      <mat-checkbox [formControlName]="jobTag.id" style="margin: 10px">{{jobTag.name}}</mat-checkbox>
+    </ng-container>
+  </div>
+  
+  <button mat-button color="primary" [disabled]="createJobFormGroup.invalid" (click)="onCreateJob()">Submit</button>
+
+</section>
+</div>

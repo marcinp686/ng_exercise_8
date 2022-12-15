@@ -56,4 +56,12 @@ export class MockapiService {
     return this.httpClient.get<JobModel>(`https://636ce2d8ab4814f2b2712854.mockapi.io/job-posts/${id}`);
   }
 
+  createJob(job: JobModel) : Observable<any> {
+    return this.httpClient.post<JobModel>('https://636ce2d8ab4814f2b2712854.mockapi.io/job-posts', job);
+  }
+
+  getTags() : Observable<JobTagModel[]> {
+    return this.httpClient.get<JobTagModel[]>('https://636ce2d8ab4814f2b2712854.mockapi.io/job-tags');
+  }
+
 }

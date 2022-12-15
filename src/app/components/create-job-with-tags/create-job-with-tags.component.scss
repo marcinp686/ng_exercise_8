@@ -1,0 +1,12 @@
+.job-create {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.job-create-form {
+  min-width: 200px;
+  max-width: 500px;
+  width: 100%;
+}
