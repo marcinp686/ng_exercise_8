@@ -20,8 +20,6 @@ export class MockapiService {
 
   // Users
   addUser(user: UserModel) : Observable<void> {
-    console.log(user);
-    
     return this.httpClient.post<void>('https://636ce2d8ab4814f2b2712854.mockapi.io/user', user);
   }
 
