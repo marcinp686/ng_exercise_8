@@ -14,17 +14,21 @@ import { ReactiveFormsModule } from '@angular/forms'
 import { FormsModule } from '@angular/forms'
 import { MatAutocompleteModule } from '@angular/material/autocomplete'
 import { MatCheckboxModule } from '@angular/material/checkbox'
+import { MatDatepickerModule } from '@angular/material/datepicker'
+import { MatMomentDateModule } from '@angular/material-moment-adapter'
 
 import { CreateUserWithRoleComponent } from './components/create-user-with-role/create-user-with-role.component';
 import { CreateUserWithRoleRadioComponent } from './components/create-user-with-role-radio/create-user-with-role-radio.component';
 import { CreateJobWithTagsComponent } from './components/create-job-with-tags/create-job-with-tags.component';
+import { CreateCartComponent } from './components/create-cart/create-cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreateUserWithRoleComponent,
     CreateUserWithRoleRadioComponent,
-    CreateJobWithTagsComponent
+    CreateJobWithTagsComponent,
+    CreateCartComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,9 @@ import { CreateJobWithTagsComponent } from './components/create-job-with-tags/cr
     MatAutocompleteModule,
     MatRadioModule,
     FormsModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatMomentDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
